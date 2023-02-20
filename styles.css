@@ -3,4 +3,52 @@
 *{
     color:rgb(88, 88, 255) ;
     text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.bodyContainer{
+    height: 100vh;
+}
+.container{
+    height:80vh;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-evenly;
+}
+.headerContainer{
+    height: 10vh;
+    background-color: aquamarine;
+    display: flex;
+    margin: auto;
+    border:   2px solid black ;
+}
+.titleAlura{
+    /* display: flex; */
+    margin: auto;
+    color: aliceblue;
+    
+}
+
+.textContainer{
+    
+    display: flex;
+    height: 45vh;
+    border:   2px solid black ;
+    margin: 3em auto;
+    
+}
+
+.respondContainer{
+    display: flex;
+    height: 45vh;
+    border:   2px solid black ;
+    margin: 3em auto;
+}
+
+.footerContainer{
+    display: flex;
+    margin:auto;
+    height: 4em;
 }

@@ -5,15 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="script" src="script.js">
-    <link rel="stylesheet" type="text/css" href="URL">
+    <link rel="stylesheet"  href="styles.css">
     <title>Desencriptador Alura</title>
 </head>
-<body>
-    <header>
-        <h1>Hola alura</h1>
+<body class="bodyContainer">
+    <header class="headerContainer">
+        <h1 class="titleAlura">Encriptador de texto Alura</h1>
     </header>
-    <div>
-        <input>numero<input/>
+    <div class="container">
+        <div class="textContainer">
+            <textarea  class="textAreaContainer" type="text" placeholder="Ingresa el texto a cifrar..." ></textarea>
+            <button class="btnEncriptar">ENCRIPTAR</button>
+            <button class="btnEncriptar">DESENCRIPTAR</button>
+        </div>
+        <div class="respondContainer">
+            <section>
+                <h3>Ningun mensaje fue encontrado</h3>
+                <img alt="Texto no encontrado"  />
+            </section>
+        </div>
     </div>
+    <footer class="footerContainer">
+        <h3>Designed By Dylan Vallejo</h3>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
