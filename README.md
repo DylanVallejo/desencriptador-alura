@@ -1,4 +1,4 @@
-# 💻 Encriptdor de tsxto Alura
+# 💻 Encriptdor de texto Alura
  
 ## Aqui puedes ver el resultado final de mi proyecto
 
