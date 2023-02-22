@@ -3,6 +3,9 @@
 
 let inputArea  =  document.querySelector('.textAreaContainer');
 let texto = document.getElementsByClassName('.valorIngresado');
+let img =  document.querySelector(".svgImage");
+let btnCopiar =document.querySelector('.btnCopiar');
+
 
 
 // creando un evento listener para catualizar el valor cada que se modifica
@@ -81,12 +84,17 @@ document.querySelector('.btnEncriptar').addEventListener
 ('click', async function (){
     
     if(texto.length === 0 ){
-        document.querySelector('.valorIngresado').innerHTML = "No has ingresado un texto para encriptar"
+        document.querySelector('.valorIngresado').innerHTML = "No has ingresado un texto para encriptar";
+        img.style.display= "flex"
+        img.style.margin= "auto"
+        btnCopiar.style.bottom = '0px';
+        
+        
     }else{
         const cifrado = await cifrar(texto);
-        console.log(cifrado)
         document.querySelector('.valorIngresado').innerHTML = cifrado   
-        // inputArea.innerHTML = ""
+        img.style.display= "none"
+        btnCopiar.style.bottom = '-150px';
         
     }
     // document.querySelector('.valorIngresado').innerHTML = ""   
@@ -97,11 +105,17 @@ document.querySelector('.btnDesencriptar').addEventListener
 ('click', async function (){
     
     if(texto.length === 0 ){
-        document.querySelector('.valorIngresado').innerHTML = "No has ingresado un texto para desencriptar"
+        document.querySelector('.valorIngresado').innerHTML = "No has ingresado un texto para desencriptar";
+        img.style.display= "flex";
+        img.style.margin= "auto";
+        btnCopiar.style.bottom = '0px';
+        
     }else{
         const desencriptado = await descifrar(texto);  
-        console.log(desencriptado)      
         document.querySelector('.valorIngresado').innerHTML = desencriptado   
+        img.style.display= "none";
+        btnCopiar.style.bottom = '-150px';
+        
     }
 })
 
