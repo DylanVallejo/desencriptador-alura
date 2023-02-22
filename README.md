@@ -30,11 +30,12 @@ Encripta y desencripta texto con tus amigos 🙌 😁
 
 ## Walktrought
 
+![image](https://user-images.githubusercontent.com/99937413/220773111-2cfa6e76-18cb-47ef-8dcb-6c297fdb8183.png)
 
 
 ## Deploy 
 
-
+ https://dylanvallejo.github.io/desencriptador-alura/
 
 ## Contribuitors
 
