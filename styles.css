@@ -1,7 +1,7 @@
 
 
 *{
-    color:rgb(88, 88, 255) ;
+    color:#0A3871 ;
     text-align: center;
     margin: 0px;
     padding: 0px;
@@ -10,6 +10,8 @@
 
 .bodyContainer{
     height: 100vh;
+    position: relative;
+    background-color: bisque
 }
 .container{
     height:80vh;
@@ -19,36 +21,126 @@
 }
 .headerContainer{
     height: 10vh;
-    background-color: aquamarine;
     display: flex;
     margin: auto;
-    border:   2px solid black ;
 }
 .titleAlura{
-    /* display: flex; */
-    margin: auto;
-    color: aliceblue;
-    
+    position: absolute;
+    top: 1em;
+    left: 2em;
 }
 
 .textContainer{
+    padding: 10px;
+    height: auto;
+    width: 35em;
+    /* border:   2px solid black ; */
+    margin: 1em auto;
+    box-sizing: content-box;
     
+}
+.textAreaContainer{
+
+    height: 80%;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 80%;
+    min-height: 20%;
+    font-size: 2em;
+}
+.warningP{
+    text-align: left;
+    margin: 5px auto;
+}
+.btnContainer{
     display: flex;
-    height: 45vh;
-    border:   2px solid black ;
-    margin: 3em auto;
+    gap: 10px;
+}
+.btnEncriptar{
+    position: relative;
+    height: 67px;
+    width: 328px;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 24px;
+    padding: 24px;
+    cursor: pointer;
+    
+
+}
+
+
+.btnDesencriptar{
+    position: relative;
+    
+    height: 67px;
+    width: 328px;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 24px;
+    padding: 24px;
+    cursor: pointer;
     
 }
 
+
+
 .respondContainer{
-    display: flex;
+    /* display: flex;
     height: 45vh;
     border:   2px solid black ;
-    margin: 3em auto;
+    margin: 3em auto; */
+    
+    padding: 10px;
+    height: auto;
+    width: 20em;
+    border: 2px solid black;
+    margin: 1em auto;
+    box-sizing: content-box;
+}
+
+.svgImage{
+    height: 20em;
+    width: 20em;
+}
+
+.btnCopiar{
+    position: relative;
+    
+    height: 67px;
+    width: 328px;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 24px;
+    padding: 24px;
+    cursor: pointer;
+    
 }
 
 .footerContainer{
     display: flex;
-    margin:auto;
-    height: 4em;
+    /* margin:auto; */
+    height: 2em;
+    /* background-color: aqua; */
+    border-top: 1px solid black;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
 }
+
+
+.btnDesencriptar:hover, .btnCopiar:hover, .btnEncriptar:hover {
+    
+    
+    color: white;
+    background-color: #0A3871;
+    -webkit-transition: background-color 700ms linear;
+    -ms-transition: background-color 700ms linear;
+    transition: background-color 700ms linear;
+}
+

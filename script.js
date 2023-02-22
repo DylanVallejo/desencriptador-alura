@@ -24,16 +24,7 @@ function cifrar(texto){
         o: "ober",
         u: "ufat"
     }
-    let valoreDesencriptados = {
-        
-        ai: "a",
-        enter: "e",
-        imes: "i",
-        ober: "o",
-        ufat: "u"
-        
-    }
-    
+
     //creo una variable nueva para manipular el array de strings creado por el metodo split
     let newString  = texto.split("");
     //itero el array y condiciono para las vocales que requiero cambiar 
@@ -53,18 +44,37 @@ function cifrar(texto){
                 newString[i] = codedValues.a
             }else if(newString[i].includes("e")){
                 newString[i] = codedValues.e
-            }else if(newString[i].includes("e")){
+            }else if(newString[i].includes("i")){
                 newString[i] = codedValues.i
             }else if(newString[i].includes("o")){
-                newString[i] = codedValues.i
+                newString[i] = codedValues.o
             }
             else if(newString[i].includes("u")){
                 newString[i] = codedValues.u
             }
         }
     }
+    // inputArea.innerHTML = ""
     return error !== "" ?  error : newString.join("");
     
+    
+    
+}
+
+
+function descifrar(texto){
+    
+    // verifying if the text contain any regex if the regex match we can replace it whit the correct vowel
+    function  validating (texto){
+        let ai = texto.replace(/ai/g, "a");
+        let enter = ai.replace(/enter/g, "e");
+        let imes = enter.replace(/imes/g, "i");
+        let ober = imes.replace(/ober/g, "o");
+        let ufat = ober.replace(/ufat/g, "u");
+        return ufat;
+    }
+    let newText  = validating(texto);
+    return newText
 }
 
 document.querySelector('.btnEncriptar').addEventListener
@@ -75,21 +85,47 @@ document.querySelector('.btnEncriptar').addEventListener
     }else{
         const cifrado = await cifrar(texto);
         console.log(cifrado)
-        
         document.querySelector('.valorIngresado').innerHTML = cifrado   
+        // inputArea.innerHTML = ""
+        
     }
+    // document.querySelector('.valorIngresado').innerHTML = ""   
+    
 })
 
 document.querySelector('.btnDesencriptar').addEventListener
 ('click', async function (){
     
     if(texto.length === 0 ){
-        document.querySelector('.valorIngresado').innerHTML = "No has ingresado un texto para encriptar"
+        document.querySelector('.valorIngresado').innerHTML = "No has ingresado un texto para desencriptar"
     }else{
-        const cifrado = await cifrar(texto);        
-        document.querySelector('.valorIngresado').innerHTML = cifrado   
+        const desencriptado = await descifrar(texto);  
+        console.log(desencriptado)      
+        document.querySelector('.valorIngresado').innerHTML = desencriptado   
     }
 })
+
+
+
+document.querySelector('.btnCopiar').addEventListener
+('click', function (){
+    
+    //navigator clipboard allow us to copy theext to clipboard in this case i'm ponting the innerHtml of the element
+    navigator.clipboard.writeText(document.querySelector('.valorIngresado').innerHTML);
+
+})
+
+
+// Desencripta nuestro mensaje secreto!
+
+// fenterlimescimesdaidenters poberr enternfrenterntair 
+// enterstenter dentersaifimesober y haibenterrlober
+// cobernclufatimesdober cobern enterximestober!
+
+//desencriptado 
+//felicidades por enfrentar este desafio y haberlo concluido con exito!
+
+
 
 
 
